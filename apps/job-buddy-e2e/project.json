@@ -1,0 +1,9 @@
+{
+  "name": "job-buddy-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/job-buddy-e2e/src",
+  "tags": [],
+  "implicitDependencies": ["job-buddy"],
+  "// targets": "to see all targets run: nx show project job-buddy-e2e --web",
+  "targets": {}
+}
