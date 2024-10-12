@@ -14,7 +14,14 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@job-buddy/button": ["libs/ui/button/src/index.ts"],
+      "@job-buddy/button/server": ["libs/ui/button/src/server.ts"],
+      "@job-buddy/job-card": ["libs/ui/job-card/src/index.ts"],
+      "@job-buddy/job-card/server": ["libs/ui/job-card/src/server.ts"],
+      "@job-buddy/modal": ["libs/ui/modal/src/index.ts"],
+      "@job-buddy/modal/server": ["libs/ui/modal/src/server.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

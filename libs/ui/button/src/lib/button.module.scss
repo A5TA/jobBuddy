@@ -1,0 +1,29 @@
+.primaryButton {
+    background-color: #007bff; /* Primary blue color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, opacity 0.3s; /* Transition effects */
+  
+    &:hover {
+      background-color: #0056b3; /* Darker blue on hover */
+      opacity: 0.8; /* Slightly transparent on hover */
+    }
+  }
+  
+.secondaryButton {
+    background-color: #dc3545; /* Secondary red color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, opacity 0.3s; /* Transition effects */
+
+    &:hover {
+        background-color: #c82333; /* Darker red on hover */
+        opacity: 0.8; /* Slightly transparent on hover */
+    }
+}
