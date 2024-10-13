@@ -1,6 +1,4 @@
 'use client'
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
 import Welcome from './components/Welcome';
 
 const Home: React.FC = (props) => {
@@ -14,14 +12,8 @@ const Home: React.FC = (props) => {
   };
 
   return (
-    <div>
-      <header>
-        <Navbar transparent={false} />
-      </header>
-      <main>
+    <div>   
         <Welcome></Welcome>
-      </main>
-      {/* <Footer /> */}
     </div>
   );
 }
