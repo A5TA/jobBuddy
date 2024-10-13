@@ -1,6 +1,8 @@
 'use client';
 import React, { useState } from 'react';
 import { Button } from '@job-buddy/button';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 interface Props {
   transparent?: boolean;
@@ -11,6 +13,8 @@ interface Props {
 const Navbar: React.FC<Props> = (props) => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const [profileDropdownOpen, setProfileDropdownOpen] = useState(false);
+  const pathname = usePathname()
+
 
   const handleLogin = () => {
     console.log('Log In button clicked');
@@ -41,14 +45,14 @@ const Navbar: React.FC<Props> = (props) => {
       <div className="container mx-auto flex justify-between">
         {/* Left Side - Brand */}
         <div className="flex items-center">
-          <a
+          <Link
             className={`text-lg font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase ${
               props.transparent ? 'text-white' : 'text-gray-800'
             }`}
             href="/"
           >
             Job Buddy
-          </a>
+          </Link>
           <button
             className={`cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent lg:hidden outline-none focus:outline-none ${
               props.transparent ? 'text-white' : 'text-gray-800'
@@ -68,44 +72,44 @@ const Navbar: React.FC<Props> = (props) => {
         >
           <ul className="flex flex-col lg:flex-row list-none mr-auto">
             <li className="flex items-center">
-              <a
+              <Link
                 className={`px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold ${
                   props.transparent ? 'lg:text-white lg:hover:text-gray-300 text-gray-800' : 'text-gray-800 hover:text-gray-600'
-                }`}
+                } ${pathname === '/jobs' ? 'font-extrabold' : ''}`}
                 href="/jobs"
               >
                 Jobs
-              </a>
+              </Link>
             </li>
             <li className="flex items-center">
-              <a
+              <Link
                 className={`px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold ${
                   props.transparent ? 'lg:text-white lg:hover:text-gray-300 text-gray-800' : 'text-gray-800 hover:text-gray-600'
-                }`}
+                } ${pathname === '/companies' ? 'font-extrabold' : ''}`}
                 href="/companies"
               >
                 Companies
-              </a>
+              </Link>
             </li>
             <li className="flex items-center">
-              <a
+              <Link
                 className={`px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold ${
                   props.transparent ? 'lg:text-white lg:hover:text-gray-300 text-gray-800' : 'text-gray-800 hover:text-gray-600'
-                }`}
+                } ${pathname === '/about' ? 'font-extrabold' : ''}`}
                 href="/about"
               >
                 About
-              </a>
+              </Link>
             </li>
             <li className="flex items-center">
-              <a
+              <Link
                 className={`px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold ${
                   props.transparent ? 'lg:text-white lg:hover:text-gray-300 text-gray-800' : 'text-gray-800 hover:text-gray-600'
-                }`}
+                } ${pathname === '/contact' ? 'font-extrabold' : ''}`}
                 href="/contact"
               >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
 

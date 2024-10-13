@@ -19,9 +19,13 @@ export default function RootLayout({
         <meta name="description" content={metadata.description} />
       </head>
       <body>
-        <Navbar transparent={false} isLoggedIn={true} />
-        {children}
-        <Footer />
+        <div className="layout">
+          <Navbar transparent={false} isLoggedIn={true} />
+          <main className="content">
+            {children}
+          </main>
+          <Footer />
+        </div>
       </body>
     </html>
   );

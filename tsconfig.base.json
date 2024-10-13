@@ -17,8 +17,10 @@
     "paths": {
       "@job-buddy/button": ["libs/ui/button/src/index.ts"],
       "@job-buddy/button/server": ["libs/ui/button/src/server.ts"],
+      "@job-buddy/job": ["libs/models/job/src/index.ts"],
       "@job-buddy/job-card": ["libs/ui/job-card/src/index.ts"],
       "@job-buddy/job-card/server": ["libs/ui/job-card/src/server.ts"],
+      "@job-buddy/job/server": ["libs/models/job/src/server.ts"],
       "@job-buddy/modal": ["libs/ui/modal/src/index.ts"],
       "@job-buddy/modal/server": ["libs/ui/modal/src/server.ts"]
     }
